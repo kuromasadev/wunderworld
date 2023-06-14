@@ -9,7 +9,7 @@
         body, html { margin: 0; padding: 0; }
         .overlay {
             position: absolute;
-            top: 0;
+            top: 0; 
             left: 0;
             height: 100%;
             width: 100%;
@@ -31,10 +31,10 @@
     <div id="mapid"></div>
 
     <div class="overlay" id="overlay">
-        <h1>Your Title</h1>
-        <p>Your Vague Description</p>
+        <h1>Title</h1>
+        <p>Vague Description</p>
         <img src="https://via.placeholder.com/150" alt="Stock Image">
-        <button onclick="document.getElementById('overlay').style.display='none'">Enter</button>
+        <button onclick="document.getElementById('overlay').style.display='none'; mymap.eachLayer(function (layer) { layer.setOpacity(1); });">Enter</button>
     </div>
 
     <script>
@@ -51,4 +51,3 @@
         }).addTo(mymap);
     </script>
 </body>
-</html>
